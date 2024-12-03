@@ -10,6 +10,7 @@ export default function TodoApp(){
                 <Route path='/' element={<LoginComponent />}> </Route>
                 <Route path='/login' element={<LoginComponent />}> </Route>
                 <Route path='/welcome' element={<WelcomeComponent />}> </Route> 
+                <Route path='*' element={<ErrorComponent />}> </Route>
             </Routes>
         </BrowserRouter>
         </div>
@@ -78,6 +79,14 @@ function WelcomeComponent(){
     return(
         <div className="Welcome">
             Welcome Component
+        </div>
+    )
+}
+function ErrorComponent(){
+    return(
+        <div className="ErrorComponent">
+            <h1> We are working really hard. </h1>
+            Appologies for the 404. Reach out to our team at dkajsdkfs@gkak.com
         </div>
     )
 }
